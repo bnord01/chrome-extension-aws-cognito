@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Cognito Auth Test",
+  "version": "1.0",
+  "description": "",
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": ["https://example.com/*"]
+    }
+  ],
+  "permissions": ["identity"],
+  "background": {
+    "service_worker": "scripts/background.js",
+    "type": "module"
+  }
+}
